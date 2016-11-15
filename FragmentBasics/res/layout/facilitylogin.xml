@@ -14,62 +14,53 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/facility_man_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:text="Facility Managment Login"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="112dp" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="textPersonName"
+        android:text="Username"
         android:ems="10"
+        android:layout_below="@+id/facility_man_login"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp"
-        android:id="@+id/editText2"
-        android:text="Matrikelnr."
-        android:layout_below="@+id/logintext"
-        android:layout_alignLeft="@+id/editText" />
+        android:id="@+id/fac_username" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:text="Passwort"
+        android:text="Username"
         android:ems="10"
-        android:id="@+id/editText"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/fac_username"
+        android:layout_alignLeft="@+id/fac_username"
+        android:layout_marginTop="69dp"
+        android:id="@+id/fac_password" />
 
     <Button
         android:text="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
-        android:id="@+id/loginbutton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Als Gast fortfahren"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guestbutton"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/fac_password"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp" />
-
-    <TextView
-        android:id="@+id/logintext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textSize="18sp"
-        android:text="Oder anmelden"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/guestbutton"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_marginTop="37dp"
+        android:id="@+id/fac_login" />
 
 </RelativeLayout>

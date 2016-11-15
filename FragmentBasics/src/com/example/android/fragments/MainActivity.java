@@ -38,15 +38,15 @@ public class MainActivity extends FragmentActivity {
             }
 
             // Create an instance of ExampleFragment
-            startScreen startScreen = new startScreen();
+            _0_startScreen _0_startScreen = new _0_startScreen();
 
             // In case this activity was started with special instructions from an Intent,
             // pass the Intent's extras to the fragment as arguments
-            startScreen.setArguments(getIntent().getExtras());
+            _0_startScreen.setArguments(getIntent().getExtras());
 
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, startScreen).commit();
+                    .add(R.id.fragment_container, _0_startScreen).commit();
         }
     }
 }

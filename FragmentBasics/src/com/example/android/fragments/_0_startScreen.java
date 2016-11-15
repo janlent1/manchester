@@ -27,13 +27,13 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class startScreen extends Fragment implements View.OnClickListener {
+public class _0_startScreen extends Fragment implements View.OnClickListener {
     RelativeLayout ll = null;
     FragmentActivity fragact = null;
 
     @Override
     public void onAttach(Activity activity) {
-        fragact =(FragmentActivity) activity;
+        fragact = (FragmentActivity)activity;
         super.onAttach(activity);
     }
 
@@ -48,8 +48,10 @@ public class startScreen extends Fragment implements View.OnClickListener {
         ll = (RelativeLayout) inflater.inflate(R.layout.startscreen, container, false);
 
         ((Button)ll.findViewById(R.id.button)).setOnClickListener(this);
+        ((Button)ll.findViewById(R.id.facmanbutton)).setOnClickListener(this);
+
         // Inflate the layout for this fragment
-        return ll;
+        return (View)ll;
     }
 
     @Override
@@ -60,16 +62,31 @@ public class startScreen extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Toast.makeText(ll.getContext(), "Das ist das erste Fragment", Toast.LENGTH_SHORT).show();
-        FragmentTransaction transaction = fragact.getSupportFragmentManager().beginTransaction();
-        IncidentLogin newFragment = new IncidentLogin();
+        Toast.makeText(this.ll.getContext(), v.getResources().getResourceName(v.getId()).substring(30), Toast.LENGTH_SHORT).show();
+        if(v.getResources().getResourceName(v.getId()).substring(30).contentEquals("id/button") ) {
+            FragmentTransaction transaction = fragact.getSupportFragmentManager().beginTransaction();
+            _1_IncidentLogin newFragment = new _1_IncidentLogin();
 
-        // Replace whatever is in the fragment_container view with this fragment,
-        // and add the transaction to the back stack so the user can navigate back
-        transaction.replace(R.id.fragment_container, newFragment);
-        transaction.addToBackStack(null);
+            // Replace whatever is in the fragment_container view with this fragment,
+            // and add the transaction to the back stack so the user can navigate back
+            transaction.replace(R.id.fragment_container, newFragment);
+            transaction.addToBackStack(null);
 
-        // Commit the transaction
-        transaction.commit();
+            // Commit the transaction
+            transaction.commit();
+        }
+        else if(v.getResources().getResourceName(v.getId()).substring(30).contentEquals("id/facmanbutton")){
+            // TODO: 11/15/2016 implement buttonclickhandler
+            FragmentTransaction transaction = fragact.getSupportFragmentManager().beginTransaction();
+            _1b_FacilityLogin newFragment = new _1b_FacilityLogin();
 
+            // Replace whatever is in the fragment_container view with this fragment,
+            // and add the transaction to the back stack so the user can navigate back
+            transaction.replace(R.id.fragment_container, newFragment);
+            transaction.addToBackStack(null);
+
+            // Commit the transaction
+            transaction.commit();
+        }
     }
 }

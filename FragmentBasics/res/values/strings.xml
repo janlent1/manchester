@@ -17,4 +17,12 @@ limitations under the License.
 
 <resources>
     <string name="app_name">Fragment Basics</string>
+    <string-array name="facilities">
+        <item>Gebäude A</item>
+        <item>Gebäude B</item>
+        <item>Gebäude C</item>
+        <item>Turmstrasse</item>
+        <item>Ostasieninstitut(OAI)</item>
+        <item>Sozialwissenschaften</item>
+    </string-array>
 </resources>

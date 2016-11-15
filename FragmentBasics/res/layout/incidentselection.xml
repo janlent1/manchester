@@ -20,56 +20,51 @@ limitations under the License.
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_marginTop="47dp"
-        android:id="@+id/editText2"
-        android:text="Matrikelnr."
-        android:layout_below="@+id/logintext"
-        android:layout_alignLeft="@+id/editText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:text="Passwort"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
-        android:id="@+id/loginbutton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Als Gast fortfahren"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guestbutton"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp" />
-
     <TextView
-        android:id="@+id/logintext"
+        android:id="@+id/selectdamageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:textSize="18sp"
-        android:text="Oder anmelden"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/guestbutton"
-        android:layout_centerHorizontal="true" />
+        android:text="Bitte Schaden auswählen"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp" />
 
+    <Button
+        android:text="Sonstiges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/othersbutton"
+        android:layout_below="@+id/selectdamageview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" />
+
+    <Button
+        android:text="Schaden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/damagebutton"
+        android:layout_below="@+id/othersbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
+
+    <Button
+        android:text="Verunreinigung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pollutionbutton"
+        android:layout_alignTop="@+id/damagebutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp" />
+
+    <Button
+        android:text="Fehlendes Zubehör"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/missingequipmentbutton"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/pollutionbutton"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
